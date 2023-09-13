@@ -1,0 +1,223 @@
+b{
+    color: var(--color) !important;
+}
+
+.donate-form {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    .line-donate{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .title-donate{
+        padding: 0 100px;
+        margin-bottom: 40px;
+
+        label{
+            font-size: 14px;
+            color: #555;
+            font-weight: 600;
+        }
+        h1{
+            color: var(--color);
+            line-height: 50px;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: lowercase;
+        }
+    }
+
+    .main-donate-form-block{
+        display: flex;
+        justify-content: space-between;
+
+        .donbl{
+            width: 50%;
+            padding-left: 100px;
+            flex-direction: row;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .list-donateform{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                
+                label{
+                    font-size: 18px;
+                    font-weight: 14px;
+                    color: #555;
+                    margin-bottom: 20px;
+                }
+
+                ul{
+                    li{
+                        list-style: upper-roman;
+                        color: #555;
+                        font-size: 14px;
+                        line-height: 25px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .descrdonbl{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding-right: 100px;
+            margin-left: 15px;
+
+            p{
+                color: #555;
+                font-size: 14px;
+                line-height: 25px;
+                font-weight: 500 !important;
+                width: 100%;
+                margin-bottom: 20px !important;
+            }
+
+            a{
+                margin-bottom: 40px !important;
+                font-size: 15px;
+                letter-spacing: .5px;
+                color: var(--color);
+                position: relative;
+                overflow: hidden !important;
+                width: 76px;
+                padding-bottom: 5px;
+
+                span{
+                    position: relative;
+                    font-weight: 600;
+                    overflow: hidden !important;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -1px;
+                        width: 100%;
+                        background: var(--color);
+                        height: 1.5px;
+                        animation: line 3s infinite linear;
+                        transition: .5s;
+                    }
+
+                    @keyframes line{
+                        0%{
+                            transform: translateX(-100%);
+                        }
+                        20%{
+                            transform: translateX(0%);
+                        }
+                        50%{
+                            transform: translateX(100%);
+                        }
+                        100%{
+                            transform: translateX(100%);
+                        }
+                    }
+                }
+            }
+
+            .photodescrdon{
+                position: relative;
+                height: 200px;
+                width: 100%;
+                background: url(../img/head.jpg);
+                background-size: cover;
+                margin-bottom: 20px;
+
+                .decphotodescrdon{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    background: var(--color);
+
+                    .svg-descrdonbl{
+                        position: absolute;
+                        background: var(--color) !important;
+                    }
+
+                    .cdecphotodescrdon svg{
+                       z-index: 99999;
+                       position: absolute;
+                       width: 70px;
+                       transform: translateY(-50%);
+                       height: 70px;
+                       left: 20px;
+                       font-size: 80px !important;
+                       fill: #fff !important;
+                    }
+
+                    .ccdecphotodescrdon{
+                        width: 100px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 100px;
+                        background: var(--color);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        .linksdescrdonbl{
+            display: flex;
+
+            a{
+                width: 71px;
+                color: var(--color);
+
+                span::after{
+                    background: var(--color) !important;
+                }
+            }
+        }
+    }
+}
+
+.right-around-scroll{
+	position: absolute;
+	z-index: 1;
+	cursor: default;
+	pointer-events: none;
+    height: 200px;
+    right: 0;
+    top: 0;
+	overflow: hidden !important;
+	width: 150px;
+	font-size: 32px;
+	fill: var(--color2);
+	font-family: sans-serif !important;
+    font-weight: bold;
+    
+    svg{
+        position: absolute;
+        right: -70px;
+        animation: infinite 10s linear roundrotate2;
+        top: -20px;
+    }
+    
+    @keyframes roundrotate2 {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+}
